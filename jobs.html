@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Job Listings</h2>
+{% for job in jobs %}
+    <div>
+        <h3>{{ job.title }}</h3>
+        <p>{{ job.description }}</p>
+        <p>Posted by: {{ job.author.username }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
